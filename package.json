@@ -1,0 +1,31 @@
+{
+  "name": "@etek.com.au/logger",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react-native": {
+      "import": "./dist/react-native.js",
+      "types": "./dist/react-native.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./src/index.ts ./src/react-native.ts --outdir ./dist --target node --format cjs --sourcemap --declaration",
+    "build:watch": "bun build ./src/index.ts ./src/react-native.ts --outdir ./dist --target node --format cjs --watch --sourcemap --declaration",
+    "dev": "bun run build:watch",
+    "prepare": "bun run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
