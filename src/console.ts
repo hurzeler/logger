@@ -17,7 +17,7 @@ let globalLogLevel: number | null = null;
 // Set log level programmatically
 export const setLogLevel = (level: keyof typeof CONSOLE_LEVELS): void => {
     globalLogLevel = CONSOLE_LEVELS[level];
-    console.log('🔧 Logger: Log level set to', level, '(value:', globalLogLevel, ')');
+    //console.log('🔧 Logger: Log level set to', level, '(value:', globalLogLevel, ')');
 };
 
 // Get current console level from environment or global override

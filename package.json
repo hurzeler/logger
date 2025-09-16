@@ -22,6 +22,9 @@
     "prepare": "bun run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "_moduleAliases": {
+    "@": "./dist"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
